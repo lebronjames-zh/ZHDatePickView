@@ -39,13 +39,19 @@
 
 - (void)showPickViewerAction
 {
-    ZHDatePickerView *pickerView = [[ZHDatePickerView alloc] initDatePickerWithDefaultDate:nil
-                                                                         andDatePickerMode:UIDatePickerModeDate];
-    
+    ZHDatePickerView *pickerView = [[ZHDatePickerView alloc] initDatePickerWithDefaultDate:nil datePickerMode:UIDatePickerModeDate];
+    //pickerView.rightBarColor = [UIColor orangeColor];
+    //pickerView.toolBarTintColor = [UIColor whiteColor];
     pickerView.delegate = self;
     [pickerView show];
 }
 
+/**
+ 选择时间回调方法
+
+ @param pickerView pickerView
+ @param dateString dateString 
+ */
 - (void)pickerView:(ZHDatePickerView *)pickerView didSelectDateString:(NSString *)dateString
 {
     [self.dateButton setTitle:dateString forState:UIControlStateNormal];

@@ -25,25 +25,35 @@
 
 @interface ZHDatePickerView : UIView
 
-@property (nonatomic, weak) id<ZHDatePickerViewDelegate> delegate;
+@property (nonatomic, weak) id <ZHDatePickerViewDelegate> delegate;
+
+/**
+ 设置确定按钮颜色
+ */
+@property (nonatomic, strong) UIColor *rightBarColor;
+
+/**
+ 设置toolbar背景色
+ */
+@property (nonatomic, strong) UIColor *toolBarTintColor;
 
 /**
  初始化ZHDatePickerView
  
  @param date 默认时间
- @param mode 时间显示格式
+ @param datePickerMode 时间显示格式
  @return ZHDatePickerView
  */
 - (instancetype)initDatePickerWithDefaultDate:(NSDate *)date
-                            andDatePickerMode:(UIDatePickerMode )mode;
+                               datePickerMode:(UIDatePickerMode)datePickerMode;
 
 /**
- 移除PickerView
+ 移除ZHPickerViewView
  */
 - (void)remove;
 
 /**
- 显示PickerView
+ 显示ZHPickerViewView
  */
 - (void)show;
 
