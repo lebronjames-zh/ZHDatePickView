@@ -40,8 +40,10 @@
 - (void)showPickViewerAction
 {
     ZHDatePickerView *pickerView = [[ZHDatePickerView alloc] initDatePickerWithDefaultDate:nil datePickerMode:UIDatePickerModeDate];
-    //pickerView.rightBarColor = [UIColor orangeColor];
-    //pickerView.toolBarTintColor = [UIColor whiteColor];
+    // 改变确定按钮颜色
+    // pickerView.rightBarColor = [UIColor orangeColor];
+    // 改变toolBar背景条颜色
+    // pickerView.toolBarTintColor = [UIColor whiteColor];
     pickerView.delegate = self;
     [pickerView show];
 }
