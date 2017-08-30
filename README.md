@@ -11,7 +11,7 @@
  @return ZHDatePickerView
  */
 - (instancetype)initDatePickerWithDefaultDate:(NSDate *)date
-                            andDatePickerMode:(UIDatePickerMode )mode;
+                            andDatePickerMode:(UIDatePickerMode)datePickerMode;
                             
 2. 回调方法
 /**
